@@ -36,7 +36,7 @@ html, body {
 .resultWrapper {
   background-color: #f1e3ab;
   width: 100%;
-  height: auto;
+  padding-bottom: 40px;
 }
 
 .start {
@@ -65,16 +65,58 @@ html, body {
 }
 
 .imgContain {
-  padding-left: 10px;
+  padding-left: 30px;
+  padding-right: 20px;
+  background-color: #eedfa3;
 }
 
 .startT {
   font-size: 1.25rem;
-  padding-bottom: 8px;
+  padding-bottom: 18px;
 }
 
 .p {
   font-size: 1rem;
   padding-bottom: 5px;
+}
+
+.p2 {
+  padding-left: 30px;
+  padding-right: 20px;
+  font-size: 0.9rem;
+}
+
+.p3 {
+  font-size: 1.4rem;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 14px;
+  font-weight: bold;
+}
+
+.btn {
+  width: 200px;
+  height: 70px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  -webkit-box-shadow: 3px 3px 4px 2px black;
+          box-shadow: 3px 3px 4px 2px black;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.iroha {
+  color: black;
+  background-color: #ff9d00;
+}
+
+.kaguya {
+  background-color: black;
 }
 /*# sourceMappingURL=stylesheet.css.map */
