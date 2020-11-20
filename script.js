@@ -231,6 +231,8 @@ titleBtn.addEventListener('click',function(){
   $(function(){
     $('#firstDisplays').slideUp(2000);
   });
+  reslutWp.className="resultWrapper";
+
 
 setTimeout(function(){
 
