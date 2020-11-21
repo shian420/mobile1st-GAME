@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -29,7 +30,6 @@ time, mark, audio, video {
 
 html, body {
   width: 100%;
-  height: 100%;
 }
 
 * {
@@ -68,9 +68,9 @@ html, body {
 }
 
 .resultWrapper {
-  background-color: #f1e3ab;
+  background-color: #f5ebc2;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 
 .resultNone {
@@ -84,16 +84,15 @@ html, body {
 }
 
 .image {
-  width: 90%;
-  height: 50%;
-  text-align: center;
-  margin: 0 auto;
+  width: 100%;
+  height: 230px;
 }
 
 .irohaA {
-  -o-object-fit: contain;
-     object-fit: contain;
-  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .kaguyaA {
@@ -105,12 +104,16 @@ html, body {
 .imgContain {
   padding-left: 30px;
   padding-right: 20px;
-  background-color: #eedfa3;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 100px;
+  background-color: #f1e3ab;
 }
 
 .startT {
   font-size: 1.25rem;
   padding-bottom: 18px;
+  text-align: center;
 }
 
 .p {
@@ -119,22 +122,24 @@ html, body {
 }
 
 .p2 {
+  text-align: center;
   padding-left: 30px;
   padding-right: 20px;
-  font-size: 0.9rem;
+  padding-bottom: 30px;
+  font-size: 1rem;
 }
 
 .p3 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-align: center;
   padding-top: 30px;
-  padding-bottom: 14px;
+  padding-bottom: 24px;
   font-weight: bold;
 }
 
 .btn {
-  width: 200px;
-  height: 70px;
+  width: 90%;
+  height: 60px;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
@@ -149,17 +154,29 @@ html, body {
   cursor: pointer;
 }
 
+.select-image-contain {
+  width: 100%;
+  margin-top: 60px;
+  background-color: #f1e3ab;
+}
+
+.select-iroha {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
 .iroha {
-  color: black;
-  background-color: #ff9d00;
+  background-color: black;
 }
 
 .kaguya {
   background-color: black;
+  padding: 0;
 }
 
 .card-container {
-  width: 100%;
+  width: 90%;
   background-color: #dbce96;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,11 +189,15 @@ html, body {
   width: 100px;
   margin-bottom: 30px;
   height: 100px;
-  border: solid 3px white;
 }
 
 .defaulut {
   background-image: url("d.jpg");
+  background-size: contain;
+}
+
+.kaguyaBack {
+  background-image: url("image/back.jpg");
   background-size: contain;
 }
 
@@ -355,5 +376,10 @@ h4 {
 
 .bgk20 {
   background-image: url("image/bgk20.jpg");
+}
+
+/*/終了画面*/
+.premove {
+  display: none;
 }
 /*# sourceMappingURL=stylesheet.css.map */

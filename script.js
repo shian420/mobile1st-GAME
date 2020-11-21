@@ -343,10 +343,10 @@ if(timerFlg2){
               const irohaImg=document.getElementById('irohaImg');
               const kaguyaImg=document.getElementById('kaguyaImg');
 
-              remup[1].classList.add("premove");
               remup[2].classList.add("premove");
               remup[3].classList.add("premove");
-              remup[4].innerHTML="Thank You For Playing!";
+              remup[4].classList.add("premove");
+              remup[5].innerHTML="Thank You For Playing!";
 
 
             $(function(){
@@ -362,7 +362,7 @@ if(timerFlg2){
               endSE.play();
 
               clearTime.className="clearI";
-              remup[5].className="blackP";
+              remup[6].className="blackP";
               kaguyaImg.className='kaguyaA';
               irohaImg.className='irohaA';
               resultWp.className="irohaH";
