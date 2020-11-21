@@ -229,7 +229,10 @@ const firstDisplays=document.getElementById('firstDisplays');
 
 titleBtn.addEventListener('click',function(){
   $(function(){
-    $('#firstDisplays').slideUp(2000);
+    $('#firstDisplays').fadeOut(1000);
+    $('#resultWp').css('display','none');
+    $('#resultWp').fadeIn(3000);
+
   });
   reslutWp.className="resultWrapper";
 
