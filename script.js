@@ -348,7 +348,8 @@ if(timerFlg2){
 
               const irohaResult=document.getElementById('irohaResult');
               const kaguyaResult=document.getElementById('kaguyaResult');
-              const clearTime=document.getElementById('clearTime');
+              const timeI=document.getElementById('timeI');
+              const timeK=document.getElementById('timeK');
 
 
 
@@ -366,7 +367,7 @@ if(timerFlg2){
               endSE.src=endBGM[0];
               endSE.loop=true;
               endSE.play();
-              skindevelop(timearr,lastFlg);
+              skindevelop(timearr,lastFlg,timeI);
               //irohaflg true
           }else{
             $(function(){
@@ -386,7 +387,7 @@ if(timerFlg2){
             timearr2.push((timearr[3]));
 
 
-            skindevelop(timearr2,lastFlg2);
+            skindevelop(timearr2,lastFlg2,timeK);
           }
             cardIn=0;
             titleMcflg2=true;
@@ -415,10 +416,11 @@ if(timerFlg2){
 }
 }//turn()の終了
 //ここまで神経衰弱
-function skindevelop(timearr,flg){
+function skindevelop(timearr,flg,times){
 
 clearInterval(time);
-clearTime.innerHTML='CLEAR '+ timearr[3];
+times.innerHTML='CLEAR! '+ timearr[3];
+
 if(flg){
   newtime.push(timearr[0]);
   newtime.push(timearr[1]);
@@ -451,7 +453,9 @@ flg=false;
 function newRecord(timearr){
 
 clearTime.style.color='red';
-clearTime.innerHTML='NEW RECORD! '+ timearr[3];
+timeI.innerHTML='NEW RECORD! '+ timearr[3];
+timeK.innerHTML='NEW RECORD! '+ timearr[3];
+
 newtime.splice(0,3);
 newtime.push(timearr[0]);
 newtime.push(timearr[1]);
