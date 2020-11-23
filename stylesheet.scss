@@ -17,7 +17,7 @@ time, mark, audio, video {
   vertical-align: baseline;
   background: transparent;
 }
-.clear {
+.clear-left {
     clear: left;
   }
 *{
@@ -325,7 +325,72 @@ h4{
 }
 
 
+
+.game-end-wrapper{
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color:rgb(200, 223, 241) ;
+  object-fit: cover;
+  padding-bottom: 30px;
+  display: none;
+}
+.img{
+  width: 100%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.clear{
+  font-size: 2.4rem;
+  padding-top: 20px;
+  font-family: fantasy;
+  font-weight: bold;
+  text-align: center;
+}
+.new-record,.time{
+  font-size: 2rem;
+  text-align: center;
+}
+.newRecord{ /*書きかける*/
+  font-size: 2rem;
+  font-weight: bold;
+  color: red;
+  display: block;
+}
+.new-record-none{
+  display: none;
+
+}
+.time{
+  font-size: 1.6rem;
+  padding-bottom: 20px;
+
+}
+.return-game{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: solid 2px white;
+}
+.irohaBG{
+  background-color: rgb(255, 98, 98);
+  box-shadow: none;
+}
+
+/*かぐやリザルト*/
+.kaguya-result{
+  color: white;
+  background-color: black;
+}
+.mouitidoBG{
+  background-color: rgb(255, 98, 98);
+}
+.kaguyaBG{
+  background-color: black;
+}
+
+
 @media (min-width:540px){
+
 
   .imgContain{
     text-align: center;
@@ -333,6 +398,15 @@ h4{
   .image{
     width: 100%;
     height:300px;
+}
+
+
+
+
+.img{
+  width: 70%;
+  margin: 0 auto;
+  display: block;
 }
 }
 
@@ -355,10 +429,25 @@ h4{
   padding-right: 20px;
 }
   .card{
-    width:192px;
-    height:192px;
+    width:194px;
+    height:194px;
     margin-bottom: 30px;
-        box-sizing: border-box;
+    box-sizing: border-box;
     }
+
+
+
+    .img{
+      width: 50%;
+    }
+    .return-game{
+      width: 40%;
+    }
+    .Btn-kakomi{
+      display: flex;
+      width: 40%;
+      margin: 0 auto;
+    }
+    
 }
 

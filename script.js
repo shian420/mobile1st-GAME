@@ -77,9 +77,10 @@ for(var iij=1;iij<=20;iij++){
   images2.push(iij);
 }
 
+const clearTime=document.getElementById('clearTime');
+
+
 const titleBtn=document.getElementById('titleBtn');
-const irohaBtn=document.getElementById('irohaBtn');
-const kaguyaBtn=document.getElementById('kaguyaBtn');
 const h2=document.querySelector('h2');
 const reslutWp=document.getElementById('resultWp');
 const titleMc=new Audio('harumodoki.mp3');
@@ -87,7 +88,7 @@ const endSE=new Audio();
 var endBGM=['megumi.mp3','kaguya.mp3'];
 
 
-irohaBtn.addEventListener('click',function(){
+function irohaBtn(){
 
   classname="defaulut";
   kaguyaflg=false;
@@ -102,6 +103,8 @@ if(titleMcflg) titleMc.pause();
 
 $(function(){
   $('#resultWp').fadeOut(1000);
+  $('#irohaResult').fadeOut(1000);
+  $('#cardBox').fadeIn(1000);
 });
 
 var arr=[];
@@ -133,11 +136,11 @@ startT=new Date();//開始時の時間再読み込みするたび変わる
 timestart();
 
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
-});
+}
 //ここまでいろは編
 
 //ここからかぐや編
-kaguyaBtn.addEventListener('click',function(){
+function kaguyaBtn(){
   classname="kaguyaBack";
   kaguyaflg=true;
   irohaflg=false;
@@ -151,6 +154,8 @@ kaguyaBtn.addEventListener('click',function(){
 
   $(function(){
     $('#resultWp').fadeOut(1000);
+    $('#cardBox').fadeIn(1000);
+
   });
 
   var arr=[];
@@ -181,7 +186,7 @@ kaguyaBtn.addEventListener('click',function(){
   startT=new Date();
   timestart();
   shuffle2(kaguyaSE,images2);
-});//かぐや編onclick
+}//かぐや編onclick
 
 
 
@@ -341,56 +346,37 @@ if(timerFlg2){
 
           if(cardIn === 10){
 
-              const remup=document.querySelectorAll('p');
+              const irohaResult=document.getElementById('irohaResult');
+              const kaguyaResult=document.getElementById('kaguyaResult');
               const clearTime=document.getElementById('clearTime');
-              const irohaImg=document.getElementById('irohaImg');
-              const kaguyaImg=document.getElementById('kaguyaImg');
-
-              remup[2].classList.add("premove");
-              remup[3].classList.add("premove");
-              remup[4].classList.add("premove");
-              remup[5].innerHTML="Thank You For Playing!";
 
 
-            $(function(){
-              $('#resultWp')
-              .slideDown(500);
-              $('.close').remove();
-            });
+
 
 
             if(irohaflg){
+              $(function(){
+                $('#cardBox').slideUp(500);
+                $('#irohaResult').slideDown(500);
+                $('.close').remove();
+              });
+
+
+
               endSE.src=endBGM[0];
               endSE.loop=true;
               endSE.play();
-
-              clearTime.className="clearI";
-              remup[6].className="blackP";
-              kaguyaImg.className='kaguyaA';
-              irohaImg.className='irohaA';
-              resultWp.className="irohaH";
-              remup[4].className="blackiwai";
-              h2.className='omedeto';
-              h2.innerHTML="一色いろは編クリア！";
-              irohaBtn.innerHTML="もういちど";
-              kaguyaBtn.innerHTML="かぐ告編へ";
               skindevelop(timearr,lastFlg);
               //irohaflg true
           }else{
+            $(function(){
+              $('#cardBox').slideUp(500);
+              $('#kaguyaResult').slideDown(500);
+              $('.close').remove();
+            });
             endSE.src=endBGM[1];
             endSE.loop=true;
             endSE.play();
-
-            clearTime.className='clearTK';//タイム白
-            remup[5].className="whiteP";//文字色白
-            irohaImg.className='irohasu';//いろは画像削除
-            kaguyaImg.className='kaguyasama';//かぐや画像追加
-            resultWp.className="kaguyaH";//背景黒に
-            remup[4].className="zitai";//おめでとう白
-            h2.className='kaguyaO';
-            h2.innerHTML="かぐや編クリア！";
-            irohaBtn.innerHTML="一色いろは編へ";
-            kaguyaBtn.innerHTML="もういちど";
 
             var timearr2=[];
 
@@ -485,6 +471,7 @@ time=setInterval(function(){
   timearr=[];
 
   timing=new Date();//現在の時間に更新している
+
 myT=Math.floor((timing.getTime() - startT.getTime()));
 //現在ースタート時
 var M=Math.floor(myT/(1000*60));
@@ -495,7 +482,6 @@ Ms=myT%1000;
 var md=M;
 var sd=S;
 var msd=Ms;
-
 
 str=h4.innerHTML='TIME '+ M + ':' + S + ':' + Ms;
 timearr.push(md,sd,msd,str);

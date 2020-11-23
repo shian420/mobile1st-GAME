@@ -9,6 +9,7 @@
 </head>
 <body id="all">
 
+<!-- 初期画面 !-->
 <div id="firstDisplays" class="firstDisplay">
     <div class="aline">
     <p>音が流れます。音量にご注意ください。</p>
@@ -17,6 +18,7 @@
   </div>
 </div>
 
+<!-- ゲームタイトル !-->
 <div id="resultWp" class="resultNone">
   <div class="image">
   <img id="irohaImg" class="irohaA" src="image/header.jpg" alt="画像">
@@ -40,7 +42,7 @@
 <img id="irohaImg" class="select-iroha" src="image/maxresdefault.jpg" alt="画像">
 </div>
 <div class="btn-back-color">
-<button id="irohaBtn" class="btn iroha">一色いろは編</button>
+<button onclick="irohaBtn();" class="btn iroha">一色いろは編</button>
 </div>
 </div>
 
@@ -49,17 +51,40 @@
   <img id="irohaImg" class="select-iroha" src="image/kaguyahp.png" alt="画像">
 </div>
 <div class="btn-back-color">
-<button id="kaguyaBtn" class="btn kaguya">かぐ告編</button>
+<button onclick="kaguyaBtn();" class="btn kaguya">かぐ告編</button>
+</div>
 </div>
 </div>
 </div>
 
-</div>
-
+<!-- ゲーム画面 !-->
 <div id="cardBox" class="card-container">
   </div>
   <h4></h4>
 
+<!-- ここからゲームクリア画面 !-->
+<div id="irohaResult" class="game-end-wrapper">
+    <h1 class="clear">いろは編クリア！</h1>
+    <h2 class="new-record-none">NEW RECORD!</h2>
+    <h2 class="time">TIME 2:36:456</h2>
+    <div class="Btn-kakomi">
+    <button onclick="irohaBtn();" class="btn iroha return-game irohaBG">もういちど</button>
+    <button onclick="kaguyaBtn();" class="btn kaguya return-game">かぐ告編へ</button>
+    <div class="clear-left"></div>
+  </div>
+    <img src="image/382551510.jpg" class="img">
+</div>
+<!-- ゲームクリア画面 かぐや編 !-->
+<div id="kaguyaResult" class="game-end-wrapper kaguya-result">
+    <h1 class="clear">かぐや編クリア！</h1>
+    <h2 class="new-record-none">NEW RECORD!</h2>
+    <h2 class="time">TIME 2:36:456</h2>
+    <div class="Btn-kakomi">
+      <button onclick="kaguyaBtn();" class="btn kaguya return-game mouitidoBG">もういちど</button>
+    <button onclick="irohaBtn();" class="btn iroha return-game kaguyaBG">一色いろは編へ</button>
+  </div>
+    <img src="image/kaguyasan.jpg" class="img">
+</div>
 
 
 
