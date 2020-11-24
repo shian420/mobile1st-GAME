@@ -22,6 +22,8 @@ var cardIn=0;
 var text;
 var classname;
 var newtime=[];
+var newtime2=[];
+
 lastFlg2=true;
 var images=[];
 var images2=[];
@@ -87,6 +89,9 @@ const titleMc=new Audio('harumodoki.mp3');
 const endSE=new Audio();
 var endBGM=['megumi.mp3','kaguya.mp3'];
 
+$(function(){
+  $('#cardBox').css('display','none');
+});
 
 function irohaBtn(){
 
@@ -154,6 +159,8 @@ function kaguyaBtn(){
 
   $(function(){
     $('#resultWp').fadeOut(1000);
+    $('#irohaResult').fadeOut(1000);
+    $('#cardBox').css('display','inline');
     $('#cardBox').fadeIn(1000);
 
   });
@@ -234,9 +241,9 @@ const firstDisplays=document.getElementById('firstDisplays');
 
 titleBtn.addEventListener('click',function(){
   $(function(){
-    $('#firstDisplays').fadeOut(1000);
+    $('#firstDisplays').fadeOut();
     $('#resultWp').css('display','none');
-    $('#resultWp').fadeIn(3000);
+    $('#resultWp').fadeIn(2000);
 
   });
   reslutWp.className="resultWrapper";
@@ -356,6 +363,7 @@ if(timerFlg2){
 
 
             if(irohaflg){
+
               $(function(){
                 $('#cardBox').slideUp(500);
                 $('#irohaResult').slideDown(500);
@@ -367,7 +375,7 @@ if(timerFlg2){
               endSE.src=endBGM[0];
               endSE.loop=true;
               endSE.play();
-              skindevelop(timearr,lastFlg,timeI);
+              skindevelop(timearr,lastFlg,timeI,newtime);
               //irohaflg true
           }else{
             $(function(){
@@ -387,7 +395,7 @@ if(timerFlg2){
             timearr2.push((timearr[3]));
 
 
-            skindevelop(timearr2,lastFlg2,timeK);
+            skindevelop(timearr2,lastFlg2,timeK,newtime);
           }
             cardIn=0;
             titleMcflg2=true;
@@ -416,7 +424,7 @@ if(timerFlg2){
 }
 }//turn()の終了
 //ここまで神経衰弱
-function skindevelop(timearr,flg,times){
+function skindevelop(timearr,flg,times,newtime){
 
 clearInterval(time);
 times.innerHTML='CLEAR! '+ timearr[3];
@@ -426,23 +434,22 @@ if(flg){
   newtime.push(timearr[1]);
   newtime.push(timearr[2]);
   console.log(newtime);
-
 }
 console.log(timearr);
 
 
 if(newtime[0] > timearr[0]){
-  newRecord(timearr);
+  newRecord(timearr,newtime);
 }
 if(newtime[0] === timearr[0]){
   if(newtime[1] > timearr[1]){
-    newRecord(timearr);
+    newRecord(timearr,newtime);
   }
 }
 if(newtime[0] === timearr[0]){
   if(newtime[1] === timearr[1]){
     if(newtime[2] > timearr[2]){
-      newRecord(timearr);
+      newRecord(timearr,newtime);
     }
   }
 }
@@ -450,9 +457,10 @@ flg=false;
 
 }
 
-function newRecord(timearr){
+function newRecord(timearr,newtime){
 
-clearTime.style.color='red';
+timeI.style.color='red';
+timeK.style.color='red';
 timeI.innerHTML='NEW RECORD! '+ timearr[3];
 timeK.innerHTML='NEW RECORD! '+ timearr[3];
 
