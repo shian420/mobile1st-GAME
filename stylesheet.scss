@@ -353,15 +353,15 @@ h4{
   font-weight: bold;
   text-align: center;
 }
-.new-record,.time{
+.new-record,.newRecords,.time{
   font-size: 2rem;
   text-align: center;
 }
-.newRecord{ /*書きかける*/
-  font-size: 2rem;
+.newRecords{ /*書きかける*/
   font-weight: bold;
-  color: red;
+  color: rgb(241, 69, 69);
   display: block;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .new-record-none{
   display: none;

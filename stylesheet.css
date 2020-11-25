@@ -421,17 +421,17 @@ h4 {
   text-align: center;
 }
 
-.new-record, .time {
+.new-record, .newRecords, .time {
   font-size: 2rem;
   text-align: center;
 }
 
-.newRecord {
+.newRecords {
   /*書きかける*/
-  font-size: 2rem;
   font-weight: bold;
-  color: red;
+  color: #f14545;
   display: block;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .new-record-none {

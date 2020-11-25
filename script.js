@@ -107,8 +107,8 @@ if(titleMcflg2){
 if(titleMcflg) titleMc.pause();
 
 $(function(){
-  $('#resultWp').fadeOut(1000);
-  $('#irohaResult').fadeOut(1000);
+  $('#resultWp').hide();
+  $('#irohaResult').hide();
   $('#cardBox').fadeIn(1000);
 });
 
@@ -158,9 +158,8 @@ function kaguyaBtn(){
   if(titleMcflg) titleMc.pause();
 
   $(function(){
-    $('#resultWp').fadeOut(1000);
-    $('#irohaResult').fadeOut(1000);
-    $('#cardBox').css('display','inline');
+    $('#resultWp').hide();
+    $('#irohaResult').hide();
     $('#cardBox').fadeIn(1000);
 
   });
@@ -241,9 +240,9 @@ const firstDisplays=document.getElementById('firstDisplays');
 
 titleBtn.addEventListener('click',function(){
   $(function(){
-    $('#firstDisplays').fadeOut();
+    $('#firstDisplays').fadeOut(1000);
     $('#resultWp').css('display','none');
-    $('#resultWp').fadeIn(2000);
+    $('#resultWp').fadeIn(3000);
 
   });
   reslutWp.className="resultWrapper";
@@ -255,7 +254,7 @@ titleMc.load();
   titleMc.loop=true;
   titleMc.play();
   titleMcflg=true;
-},1000);
+},500);
 });
 
   //配列シャッフル　かぐや編でも使用
@@ -365,8 +364,8 @@ if(timerFlg2){
             if(irohaflg){
 
               $(function(){
-                $('#cardBox').slideUp(500);
-                $('#irohaResult').slideDown(500);
+                $('#cardBox').hide();
+                $('#irohaResult').slideDown(1000);
                 $('.close').remove();
               });
 
@@ -379,8 +378,8 @@ if(timerFlg2){
               //irohaflg true
           }else{
             $(function(){
-              $('#cardBox').slideUp(500);
-              $('#kaguyaResult').slideDown(500);
+              $('#cardBox').hide();
+              $('#kaguyaResult').slideDown(1000);
               $('.close').remove();
             });
             endSE.src=endBGM[1];
@@ -424,7 +423,10 @@ if(timerFlg2){
 }
 }//turn()の終了
 //ここまで神経衰弱
+const record=document.getElementById('record');
 function skindevelop(timearr,flg,times,newtime){
+
+record.className='new-record-none';
 
 clearInterval(time);
 times.innerHTML='CLEAR! '+ timearr[3];
@@ -458,11 +460,9 @@ flg=false;
 }
 
 function newRecord(timearr,newtime){
-
-timeI.style.color='red';
-timeK.style.color='red';
-timeI.innerHTML='NEW RECORD! '+ timearr[3];
-timeK.innerHTML='NEW RECORD! '+ timearr[3];
+  record.className='newRecords';
+timeI.innerHTML=timearr[3];
+timeK.innerHTML=timearr[3];
 
 newtime.splice(0,3);
 newtime.push(timearr[0]);
