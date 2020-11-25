@@ -124,6 +124,7 @@ font-family: fantasy;
 
 }
 .btn{
+  cursor: pointer;
     width: 90%;
     height: 60px;
     display: block;
@@ -131,10 +132,7 @@ font-family: fantasy;
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    box-shadow: 3px 3px 4px 2px black;
-}
-.btn:hover{
-    cursor: pointer;
+    box-shadow: 0 0 0 4px black;
 }
 .select-image-contain{
   width: 100%;

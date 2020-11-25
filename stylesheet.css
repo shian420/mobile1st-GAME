@@ -139,6 +139,7 @@ html, body {
 }
 
 .btn {
+  cursor: pointer;
   width: 90%;
   height: 60px;
   display: block;
@@ -146,12 +147,8 @@ html, body {
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  -webkit-box-shadow: 3px 3px 4px 2px black;
-          box-shadow: 3px 3px 4px 2px black;
-}
-
-.btn:hover {
-  cursor: pointer;
+  -webkit-box-shadow: 0 0 0 4px black;
+          box-shadow: 0 0 0 4px black;
 }
 
 .select-image-contain {
