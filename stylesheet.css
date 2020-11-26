@@ -139,7 +139,6 @@ html, body {
 }
 
 .btn {
-  cursor: pointer;
   width: 90%;
   height: 60px;
   display: block;
