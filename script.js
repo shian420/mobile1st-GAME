@@ -81,6 +81,9 @@ for(var iij=1;iij<=20;iij++){
 
 const clearTime=document.getElementById('clearTime');
 
+const ib=document.getElementById('ib');
+const kb=document.getElementById('kb');
+
 
 const titleBtn=document.getElementById('titleBtn');
 const h2=document.querySelector('h2');
@@ -88,6 +91,8 @@ const reslutWp=document.getElementById('resultWp');
 const titleMc=new Audio('harumodoki.mp3');
 const endSE=new Audio();
 var endBGM=['megumi.mp3','kaguya.mp3'];
+const cardBox=document.getElementById('cardBox');
+
 
 $(function(){
   $('#cardBox').css('display','none');
@@ -122,8 +127,6 @@ for(var i=0;i<10;i++){
 shuffl(arr);//ナンバーシャッフル
 
 //div生成
-const cardBox=document.getElementById('cardBox');
-
 for(var i=0;i<20;i++){
 const div=document.createElement('div');
 div.className="card";//最初は裏
@@ -174,8 +177,6 @@ function kaguyaBtn(){
   shuffl(arr);//ナンバーシャッフル
 
   //div生成
-  const cardBox=document.getElementById('cardBox');
-
   for(var i=0;i<20;i++){
   const div=document.createElement('div');
   div.className="card";//最初は裏
@@ -215,9 +216,7 @@ for(var i=0;i<10;i++){
 shuffl(arr);//ナンバーシャッフル
 
 //div生成
-const cardBox=document.getElementById('cardBox');
-
-for(var i=0;i<20;i++){
+for(var i=0;i<20;i++){6
 const div=document.createElement('div');
 div.className="card";//最初は裏
 div.classList.add(classname);
@@ -236,15 +235,24 @@ timestart();
 //ここまでsample1
 
 //ここから共通スタート画面
-const firstDisplays=document.getElementById('firstDisplays');
 
 titleBtn.addEventListener('click',function(){
   $(function(){
     $('#firstDisplays').fadeOut(1000);
     $('#resultWp').fadeIn(3000);
 
-  });
+    $(window).scroll(function(){
+      $('.effect').each(function(){
+        var zahyou=$(this).offset().top;
+        var scleantop=$(window).scrollTop();
+        var windowheight=$(window).height();
+        if(scleantop > zahyou - windowheight + 200){
+          $(this).addClass('effect-scroll');
 
+        }
+      });
+    });
+  });
 
 setTimeout(function(){
 
@@ -253,6 +261,7 @@ titleMc.load();
   titleMc.play();
   titleMcflg=true;
 },500);
+
 });
 
   //配列シャッフル　かぐや編でも使用

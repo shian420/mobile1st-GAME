@@ -17,6 +17,7 @@ time, mark, audio, video {
   vertical-align: baseline;
   background: transparent;
 }
+
 .clear-left {
     clear: left;
   }
@@ -41,6 +42,7 @@ html,body{
     margin: auto;
     padding-top: 30px;
     p{
+     
         padding-bottom: 10px;
         font-size: 1rem;
         text-align: center;
@@ -55,10 +57,24 @@ html,body{
         display: block;
         font-size: 1rem;
         box-shadow: 2px 2px 2px 2px black;
+        animation: name alternate infinite .6s linear;
 
     }
 }
+@keyframes name{
+  0%{
+    transform: translateX(-200px);
+    background-color: rgb(175, 220, 255);
+  }
+  50%{
+    transform: translateX(0px) scale(2,0.5) ;
 
+ }
+  100%{
+    transform: translateX(200px);
+    background-color: red;
+  }
+}
 
 
 .resultWrapper{
@@ -71,6 +87,29 @@ html,body{
   width: 100%;
   padding-bottom: 80px;
     display: none;
+}
+.p3{
+  font-size: 1.7rem;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+.effect{
+  opacity: 0;
+  transform: translate(0,75px);
+  transition: all .4s ease-out;
+}
+.flex-skin .effect:nth-of-type(8){
+  transition-delay: .2s;
+}
+.flex-skin .effect:nth-of-type(9){
+  transition-delay: .4s;
+}
+.effect-scroll{
+  opacity: 1;
+ transform:translate(0,0);
 }
 .start{
 font-size: 1.4rem;
@@ -117,15 +156,7 @@ font-family: fantasy;
     padding-bottom: 30px;
     font-size: 1rem;
 }
-.p3{
-    font-size: 1.7rem;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 24px;
-    font-weight: bold;
-    font-family: fantasy;
 
-}
 .btn{
     width: 90%;
     height: 60px;

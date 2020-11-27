@@ -64,6 +64,42 @@ html, body {
   font-size: 1rem;
   -webkit-box-shadow: 2px 2px 2px 2px black;
           box-shadow: 2px 2px 2px 2px black;
+  -webkit-animation: name alternate infinite .6s linear;
+          animation: name alternate infinite .6s linear;
+}
+
+@-webkit-keyframes name {
+  0% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    background-color: #afdcff;
+  }
+  50% {
+    -webkit-transform: translateX(0px) scale(2, 0.5);
+            transform: translateX(0px) scale(2, 0.5);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    background-color: red;
+  }
+}
+
+@keyframes name {
+  0% {
+    -webkit-transform: translateX(-200px);
+            transform: translateX(-200px);
+    background-color: #afdcff;
+  }
+  50% {
+    -webkit-transform: translateX(0px) scale(2, 0.5);
+            transform: translateX(0px) scale(2, 0.5);
+  }
+  100% {
+    -webkit-transform: translateX(200px);
+            transform: translateX(200px);
+    background-color: red;
+  }
 }
 
 .resultWrapper {
@@ -77,6 +113,39 @@ html, body {
   width: 100%;
   padding-bottom: 80px;
   display: none;
+}
+
+.p3 {
+  font-size: 1.7rem;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 24px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+
+.effect {
+  opacity: 0;
+  -webkit-transform: translate(0, 75px);
+          transform: translate(0, 75px);
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+}
+
+.flex-skin .effect:nth-of-type(8) {
+  -webkit-transition-delay: .2s;
+          transition-delay: .2s;
+}
+
+.flex-skin .effect:nth-of-type(9) {
+  -webkit-transition-delay: .4s;
+          transition-delay: .4s;
+}
+
+.effect-scroll {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .start {
@@ -130,15 +199,6 @@ html, body {
   padding-right: 20px;
   padding-bottom: 30px;
   font-size: 1rem;
-}
-
-.p3 {
-  font-size: 1.7rem;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 24px;
-  font-weight: bold;
-  font-family: fantasy;
 }
 
 .btn {
