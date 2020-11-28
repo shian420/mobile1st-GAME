@@ -103,10 +103,6 @@ $('.iroha').on('click',function(){
     $('#cardnone').fadeIn(1000);
   });
 
-if(titleMcflg2){
-  endSE.pause();
-  endSE.currentTime=0;
-}
 
 if(titleMcflg) titleMc.pause();
 titleMcflg=false;
@@ -314,10 +310,6 @@ if(timerFlg2){
                 $('.close').remove();
               });
 
-              endSE.src=endBGM[0];
-              endSE.load();
-              endSE.loop=true;
-              endSE.play();
 
 
               //irohaflg true
