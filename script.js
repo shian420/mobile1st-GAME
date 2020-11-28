@@ -365,6 +365,8 @@ if(timerFlg2){
 
 
             if(irohaflg){
+              skindevelop(timearr,lastFlg,timeI,newtime);
+
 
               setTimeout(function(){
 
@@ -381,13 +383,6 @@ if(timerFlg2){
               });
 
 
-
-              endSE.src=endBGM[0];
-              endSE.load();
-              endSE.loop=true;
-              endSE.play();
-
-              skindevelop(timearr,lastFlg,timeI,newtime);
               //irohaflg true
           }else{
             $(function(){
