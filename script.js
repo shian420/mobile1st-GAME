@@ -310,7 +310,7 @@ if(timerFlg2){
                 $('#cardnone').hide();
                 $('#irohaResult').slideDown(1000);
                 $('.close').remove();
-                $('#irohaResult').on('click',function(){
+                $('.clear').click(function(){
                   endSE.src=endBGM[0];
                   endSE.load();
                   endSE.loop=true;
