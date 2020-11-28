@@ -96,7 +96,8 @@ const cardBox=document.getElementById('cardBox');
 
 
 
-function irohaBtn(){
+ib.addEventListener('click',function(){
+
   classname="defaulut";
   kaguyaflg=false;
   irohaflg=true;
@@ -141,11 +142,11 @@ startT=new Date();//開始時の時間再読み込みするたび変わる
 timestart();
 
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
-}
+});
 //ここまでいろは編
 
 //ここからかぐや編
-function kaguyaBtn(){
+kb.addEventListener('click',function(){
     classname="kaguyaBack";
   kaguyaflg=true;
   irohaflg=false;
@@ -190,7 +191,7 @@ function kaguyaBtn(){
   startT=new Date();
   timestart();
   shuffle2(kaguyaSE,images2);
-}//かぐや編onclick
+});//かぐや編onclick
 
 
 
