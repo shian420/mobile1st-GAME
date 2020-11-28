@@ -105,7 +105,6 @@ $('.iroha').on('click',function(){
 
 
 if(titleMcflg) titleMc.pause();
-titleMcflg=false;
 
 sample1(classname);
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
