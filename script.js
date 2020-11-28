@@ -114,6 +114,10 @@ $(function(){
   $('#irohaResult').hide();
   $('#cardnone').fadeIn(1000);
 });
+endSE.src=endBGM[0];
+endSE.load();
+endSE.loop=true;
+endSE.play();
 
 var arr=[];
 for(var i=0;i<10;i++){
@@ -351,6 +355,7 @@ if(timerFlg2){
       cardss2=div;
       timerFlg=true;
 
+        sound.addEventListener('ended',function(){
 
           if(cardIn === 10){
 
@@ -368,10 +373,7 @@ if(timerFlg2){
 
 
 
-                endSE.src=endBGM[0];
-                endSE.load();
-                endSE.loop=true;
-                endSE.play();
+
 
               $(function(){
                 $('#cardnone').hide();
@@ -412,6 +414,7 @@ if(timerFlg2){
           cardss2.className="card close";
           cardss.className="card close";
           timerFlg=false;
+        });
 
     }else{ //2回目で外れ 裏に戻す作業
       cardss2=div;
