@@ -351,7 +351,6 @@ if(timerFlg2){
       cardss2=div;
       timerFlg=true;
 
-        sound.addEventListener('ended',function(){
 
           if(cardIn === 10){
 
@@ -368,13 +367,11 @@ if(timerFlg2){
               skindevelop(timearr,lastFlg,timeI,newtime);
 
 
-              setTimeout(function(){
 
                 endSE.src=endBGM[0];
                 endSE.load();
                 endSE.loop=true;
                 endSE.play();
-              },500);
 
               $(function(){
                 $('#cardnone').hide();
@@ -385,6 +382,9 @@ if(timerFlg2){
 
               //irohaflg true
           }else{
+
+            skindevelop(timearr2,lastFlg2,timeK,newtime);
+
             $(function(){
               $('#cardnone').hide();
               $('#kaguyaResult').slideDown(1000);
@@ -404,7 +404,6 @@ if(timerFlg2){
             timearr2.push((timearr[3]));
 
 
-            skindevelop(timearr2,lastFlg2,timeK,newtime);
           }
             cardIn=0;
             titleMcflg2=true;
@@ -413,7 +412,6 @@ if(timerFlg2){
           cardss2.className="card close";
           cardss.className="card close";
           timerFlg=false;
-        });
 
     }else{ //2回目で外れ 裏に戻す作業
       cardss2=div;
