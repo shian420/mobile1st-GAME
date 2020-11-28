@@ -288,12 +288,7 @@ if(timerFlg2){
       cardIn++;
       cardss2=div;
       timerFlg=true;
-      if(cardIn === 10){
-        endSE.src=endBGM[0];
-        endSE.load();
-        endSE.loop=true;
-        endSE.play();
-      }
+
 
         sound.addEventListener('ended',function(){
 
@@ -315,6 +310,12 @@ if(timerFlg2){
                 $('#cardnone').hide();
                 $('#irohaResult').slideDown(1000);
                 $('.close').remove();
+                $('#irohaResult').on('click',function(){
+                  endSE.src=endBGM[0];
+                  endSE.load();
+                  endSE.loop=true;
+                  endSE.play();
+                });
               });
 
               //irohaflg true
