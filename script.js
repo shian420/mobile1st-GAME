@@ -109,11 +109,7 @@ if(titleMcflg2){
 
 if(titleMcflg) titleMc.pause();
 
-$(function(){
-  $('#resultWp').hide();
-  $('#irohaResult').hide();
-  $('#cardnone').fadeIn(1000);
-});
+
 sample1(classname);
 
 
@@ -175,7 +171,11 @@ $('.kaguya').on('click',function(){
 
 //div作成のための関数
 function sample1(classname){
-
+  $(function(){
+    $('#resultWp').hide();
+    $('#irohaResult').hide();
+    $('#cardnone').fadeIn(1000);
+  });
 
 var arr=[];
 for(var i=0;i<10;i++){
