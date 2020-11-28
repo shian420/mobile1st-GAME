@@ -374,8 +374,10 @@ if(timerFlg2){
 
 
               endSE.src=endBGM[0];
+              endSE.load();
               endSE.loop=true;
               endSE.play();
+
               skindevelop(timearr,lastFlg,timeI,newtime);
               //irohaflg true
           }else{
@@ -384,7 +386,9 @@ if(timerFlg2){
               $('#kaguyaResult').slideDown(1000);
               $('.close').remove();
             });
+
             endSE.src=endBGM[1];
+            endSE.load();
             endSE.loop=true;
             endSE.play();
 
