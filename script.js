@@ -107,11 +107,9 @@ if(titleMcflg2){
   endSE.currentTime=0;
 }
 
-
+if(titleMcflg) titleMc.pause();
 
 sample1(classname);
-
-
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
 });
 //ここまでいろは編
@@ -129,39 +127,7 @@ $('.kaguya').on('click',function(){
 
   if(titleMcflg) titleMc.pause();
 
-  $(function(){
-    $('#resultWp').hide();
-    $('#irohaResult').hide();
-    $('#cardnone').fadeIn(1000);
-
-  });
-
-  var arr=[];
-  for(var i=0;i<10;i++){
-    //2組の数値を同じ配列に代入
-    arr.push(i);
-    arr.push(i);
-    //0~9が2つずつある状態計20個
-  }
-  shuffl(arr);//ナンバーシャッフル
-
-  //div生成
-  for(var i=0;i<20;i++){
-  const div=document.createElement('div');
-  div.className="card";//最初は裏
-  div.classList.add(classname);
-  div.index=i;
-  div.number=arr[i];
-  //soundとdiv.numberは対応している
-  div.innerHTML="";
-  div.addEventListener('click',turn);
-
-  cardBox.appendChild(div);
-  cardCase.push(div);
-  }
-  startT=new Date();
-  timestart();
-
+  sample1(classname);
   shuffle2(kaguyaSE,images2);
 });//かぐや編onclick
 
@@ -170,8 +136,6 @@ $('.kaguya').on('click',function(){
 
 //div作成のための関数
 function sample1(classname){
-  if(titleMcflg) titleMc.pause();
-
   $(function(){
     $('#resultWp').hide();
     $('#irohaResult').hide();
