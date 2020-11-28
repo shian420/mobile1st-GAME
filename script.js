@@ -73,6 +73,15 @@ var kaguyaSE=[
   'voice/kaguya20.mp3'
 ];
 
+$(function(){
+  $('.clear').on('click',function(){
+    endSE.src=endBGM[0];
+    endSE.load();
+    endSE.loop=true;
+    endSE.play();
+  });
+});
+
 
 for(var iij=1;iij<=20;iij++){
   images.push(iij);
@@ -304,18 +313,14 @@ if(timerFlg2){
 
 
             if(irohaflg){
+
               skindevelop(timearr,lastFlg,timeI,newtime);
 
               $(function(){
                 $('#cardnone').hide();
                 $('#irohaResult').slideDown(1000);
                 $('.close').remove();
-                $('.clear').click(function(){
-                  endSE.src=endBGM[0];
-                  endSE.load();
-                  endSE.loop=true;
-                  endSE.play();
-                });
+
               });
 
               //irohaflg true
