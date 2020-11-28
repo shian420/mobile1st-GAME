@@ -99,10 +99,23 @@ const cardBox=document.getElementById('cardBox');
 $('.iroha').on('click',function(){
 
   classname="defaulut";
-  sample1(classname);
-
   kaguyaflg=false;
   irohaflg=true;
+
+if(titleMcflg2){
+  endSE.pause();
+  endSE.currentTime=0;
+}
+
+if(titleMcflg) titleMc.pause();
+
+$(function(){
+  $('#resultWp').hide();
+  $('#irohaResult').hide();
+  $('#cardnone').fadeIn(1000);
+});
+sample1(classname);
+
 
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
 });
@@ -163,18 +176,6 @@ $('.kaguya').on('click',function(){
 //div作成のための関数
 function sample1(classname){
 
-  if(titleMcflg2){
-    endSE.pause();
-    endSE.currentTime=0;
-  }
-
-if(titleMcflg) titleMc.pause();
-
-$(function(){
-  $('#resultWp').hide();
-  $('#irohaResult').hide();
-  $('#cardnone').fadeIn(1000);
-});
 
 var arr=[];
 for(var i=0;i<10;i++){
