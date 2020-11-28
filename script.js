@@ -253,9 +253,10 @@ titleBtn.addEventListener('click',function(){
 
 setTimeout(function(){
 
-titleMc.load();
-  titleMc.loop=true;
-  titleMc.play();
+  endSE.src=endBGM[0];
+  endSE.load();
+  endSE.loop=true;
+  endSE.play();
   titleMcflg=true;
 },500);
 });
