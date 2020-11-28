@@ -107,7 +107,6 @@ if(titleMcflg2){
   endSE.currentTime=0;
 }
 
-if(titleMcflg) titleMc.pause();
 
 
 sample1(classname);
@@ -171,6 +170,8 @@ $('.kaguya').on('click',function(){
 
 //div作成のための関数
 function sample1(classname){
+  if(titleMcflg) titleMc.pause();
+
   $(function(){
     $('#resultWp').hide();
     $('#irohaResult').hide();
