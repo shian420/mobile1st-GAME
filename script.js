@@ -96,8 +96,7 @@ const cardBox=document.getElementById('cardBox');
 
 
 
-ib.addEventListener('click',function(){
-
+function irohaBtn(){
   classname="defaulut";
   kaguyaflg=false;
   irohaflg=true;
@@ -114,10 +113,7 @@ $(function(){
   $('#irohaResult').hide();
   $('#cardnone').fadeIn(1000);
 });
-endSE.src=endBGM[0];
-endSE.load();
-endSE.loop=true;
-endSE.play();
+
 
 var arr=[];
 for(var i=0;i<10;i++){
@@ -146,12 +142,12 @@ startT=new Date();//開始時の時間再読み込みするたび変わる
 timestart();
 
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
-});
+}
 //ここまでいろは編
 
 //ここからかぐや編
-kb.addEventListener('click',function(){
-    classname="kaguyaBack";
+function kaguyaBtn(){
+      classname="kaguyaBack";
   kaguyaflg=true;
   irohaflg=false;
 
@@ -195,7 +191,7 @@ kb.addEventListener('click',function(){
   startT=new Date();
   timestart();
   shuffle2(kaguyaSE,images2);
-});//かぐや編onclick
+}//かぐや編onclick
 
 
 
@@ -371,15 +367,15 @@ if(timerFlg2){
             if(irohaflg){
               skindevelop(timearr,lastFlg,timeI,newtime);
 
-
-
-
-
               $(function(){
                 $('#cardnone').hide();
                 $('#irohaResult').slideDown(1000);
                 $('.close').remove();
               });
+              endSE.src=endBGM[0];
+              endSE.load();
+              endSE.loop=true;
+              endSE.play();
 
 
               //irohaflg true
