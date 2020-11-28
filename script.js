@@ -102,7 +102,10 @@ $('.iroha').on('click',function(){
     $('#irohaResult').hide();
     $('#cardnone').fadeIn(1000);
   });
-
+  if(titleMcflg2){
+    endSE.pause();
+    endSE.currentTime=0;
+  }
 
 if(titleMcflg) titleMc.pause();
 
@@ -114,8 +117,8 @@ sample1(classname);
 //ここからかぐや編
 $('.kaguya').on('click',function(){
       classname="kaguyaBack";
-  kaguyaflg=true;
-  irohaflg=false;
+      kaguyaflg=true;
+      irohaflg=false;
 
   if(titleMcflg2){
     endSE.pause();
@@ -128,7 +131,6 @@ $('.kaguya').on('click',function(){
   });
 
   if(titleMcflg) titleMc.pause();
-  titleMcflg=false;
 
   sample1(classname);
   shuffle2(kaguyaSE,images2);
@@ -286,6 +288,12 @@ if(timerFlg2){
       cardIn++;
       cardss2=div;
       timerFlg=true;
+      if(cardIn === 10){
+        endSE.src=endBGM[0];
+        endSE.load();
+        endSE.loop=true;
+        endSE.play();
+      }
 
         sound.addEventListener('ended',function(){
 
@@ -308,8 +316,6 @@ if(timerFlg2){
                 $('#irohaResult').slideDown(1000);
                 $('.close').remove();
               });
-
-
 
               //irohaflg true
           }else{
