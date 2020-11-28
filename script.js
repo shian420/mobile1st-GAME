@@ -253,10 +253,9 @@ titleBtn.addEventListener('click',function(){
 
 setTimeout(function(){
 
-  endSE.src=endBGM[0];
-  endSE.load();
-  endSE.loop=true;
-  endSE.play();
+titleMc.load();
+  titleMc.loop=true;
+  titleMc.play();
   titleMcflg=true;
 },500);
 });
@@ -366,6 +365,14 @@ if(timerFlg2){
 
 
             if(irohaflg){
+
+              setTimeout(function(){
+
+                endSE.src=endBGM[0];
+                endSE.load();
+                endSE.loop=true;
+                endSE.play();
+              },500);
 
               $(function(){
                 $('#cardnone').hide();
