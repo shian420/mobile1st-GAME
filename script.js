@@ -99,10 +99,10 @@ const cardBox=document.getElementById('cardBox');
 $('.iroha').on('click',function(){
 
   classname="defaulut";
+  sample1(classname);
+
   kaguyaflg=false;
   irohaflg=true;
-
-sample1(classname);
 
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
 });
