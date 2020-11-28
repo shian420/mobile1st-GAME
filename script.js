@@ -94,11 +94,9 @@ var endBGM=['megumi.mp3','kaguya.mp3'];
 const cardBox=document.getElementById('cardBox');
 
 
-$(function(){
-  $('#cardBox').css('display','none');
-});
 
-function irohaBtn(){
+
+ib.addEventListener('click',function(){
 
   classname="defaulut";
   kaguyaflg=false;
@@ -114,7 +112,7 @@ if(titleMcflg) titleMc.pause();
 $(function(){
   $('#resultWp').hide();
   $('#irohaResult').hide();
-  $('#cardBox').fadeIn(1000);
+  $('#cardnone').fadeIn(1000);
 });
 
 var arr=[];
@@ -144,11 +142,11 @@ startT=new Date();//開始時の時間再読み込みするたび変わる
 timestart();
 
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
-}
+});
 //ここまでいろは編
 
 //ここからかぐや編
-function kaguyaBtn(){
+kb.addEventListener('click',function(){
   classname="kaguyaBack";
   kaguyaflg=true;
   irohaflg=false;
@@ -163,7 +161,7 @@ function kaguyaBtn(){
   $(function(){
     $('#resultWp').hide();
     $('#irohaResult').hide();
-    $('#cardBox').fadeIn(1000);
+    $('#cardnone').fadeIn(1000);
 
   });
 
@@ -193,7 +191,7 @@ function kaguyaBtn(){
   startT=new Date();
   timestart();
   shuffle2(kaguyaSE,images2);
-}//かぐや編onclick
+});//かぐや編onclick
 
 
 
@@ -248,7 +246,6 @@ titleBtn.addEventListener('click',function(){
         var windowheight=$(window).height();
         if(scleantop > zahyou - windowheight + 200){
           $(this).addClass('effect-scroll');
-
         }
       });
     });
@@ -261,7 +258,6 @@ titleMc.load();
   titleMc.play();
   titleMcflg=true;
 },500);
-
 });
 
   //配列シャッフル　かぐや編でも使用
@@ -371,7 +367,7 @@ if(timerFlg2){
             if(irohaflg){
 
               $(function(){
-                $('#cardBox').hide();
+                $('#cardnone').hide();
                 $('#irohaResult').slideDown(1000);
                 $('.close').remove();
               });
@@ -385,7 +381,7 @@ if(timerFlg2){
               //irohaflg true
           }else{
             $(function(){
-              $('#cardBox').hide();
+              $('#cardnone').hide();
               $('#kaguyaResult').slideDown(1000);
               $('.close').remove();
             });
