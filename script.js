@@ -97,7 +97,16 @@ $('.iroha').on('click',function(){
   kaguyaflg=false;
   irohaflg=true;
 
+  $(function(){
+    $('#resultWp').hide();
+    $('#irohaResult').hide();
+    $('#cardnone').fadeIn(1000);
+  });
 
+if(titleMcflg2){
+  endSE.pause();
+  endSE.currentTime=0;
+}
 
 if(titleMcflg) titleMc.pause();
 titleMcflg=false;
@@ -117,8 +126,14 @@ $('.kaguya').on('click',function(){
     endSE.pause();
     endSE.currentTime=0;
   }
+  $(function(){
+    $('#resultWp').hide();
+    $('#kaguyaResult').hide();
+    $('#cardnone').fadeIn(1000);
+  });
 
   if(titleMcflg) titleMc.pause();
+  titleMcflg=false;
 
   sample1(classname);
   shuffle2(kaguyaSE,images2);
@@ -129,11 +144,6 @@ $('.kaguya').on('click',function(){
 
 //div作成のための関数
 function sample1(classname){
-  $(function(){
-    $('#resultWp').hide();
-    $('#irohaResult').hide();
-    $('#cardnone').fadeIn(1000);
-  });
 
 var arr=[];
 for(var i=0;i<10;i++){
