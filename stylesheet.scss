@@ -34,7 +34,7 @@ html,body{
 
 
 .firstDisplay{
-  background-color: rgb(82, 235, 189);
+  background-color: rgb(202, 214, 132);
     width: 100%;
     height: 100vh;
 }
@@ -157,6 +157,7 @@ font-family: fantasy;
 }
 
 .btn{
+  cursor: pointer;
   user-select: none;
     width: 90%;
     height: 60px;

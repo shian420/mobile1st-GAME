@@ -96,7 +96,8 @@ const cardBox=document.getElementById('cardBox');
 
 
 
-function irohaBtn(){
+$('.iroha').on('click',function(){
+
   classname="defaulut";
   kaguyaflg=false;
   irohaflg=true;
@@ -142,7 +143,7 @@ startT=new Date();//開始時の時間再読み込みするたび変わる
 timestart();
 
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
-}
+});
 //ここまでいろは編
 
 //ここからかぐや編
