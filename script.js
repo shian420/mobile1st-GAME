@@ -80,11 +80,6 @@ for(var iij=1;iij<=20;iij++){
 }
 
 const clearTime=document.getElementById('clearTime');
-
-const ib=document.getElementById('ib');
-const kb=document.getElementById('kb');
-
-
 const titleBtn=document.getElementById('titleBtn');
 const h2=document.querySelector('h2');
 const reslutWp=document.getElementById('resultWp');
@@ -102,12 +97,10 @@ $('.iroha').on('click',function(){
   kaguyaflg=false;
   irohaflg=true;
 
-if(titleMcflg2){
-  endSE.pause();
-  endSE.currentTime=0;
-}
+
 
 if(titleMcflg) titleMc.pause();
+titleMcflg=false;
 
 sample1(classname);
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
@@ -310,6 +303,7 @@ if(timerFlg2){
                 $('#irohaResult').slideDown(1000);
                 $('.close').remove();
               });
+
               endSE.src=endBGM[0];
               endSE.load();
               endSE.loop=true;
