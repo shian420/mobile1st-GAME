@@ -416,10 +416,13 @@ html, body {
   text-align: center;
   width: 60%;
   height: 100px;
-  background-color: black;
+  background-color: #684949;
   border: solid 2px white;
   color: white;
   font-size: 1.3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   cursor: pointer;
   position: absolute;
   top: 50%;
