@@ -327,7 +327,7 @@ if(timerFlg2){
               cardBox.appendChild(endBtn);
               $('#finish').on('click',function(){
 
-              
+
 
                          $(function(){
                            $('#cardnone').slideUp(500);
@@ -337,6 +337,10 @@ if(timerFlg2){
 
                          });
                        });
+                       endSE.src=endBGM[0];
+                                  endSE.load();
+                                  endSE.loop=true;
+                                  endSE.play();
 
 
 
