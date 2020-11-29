@@ -307,7 +307,7 @@ if(timerFlg2){
 
             if(irohaflg){
               skindevelop(timearr,lastFlg,timeI,newtime);
-              const endBtn=document.createElement('div');
+              const endBtn=document.createElement('button');
               endBtn.textContent="え！？クリアしたん...？聞いてへん...";
               endBtn.className="endBtn";
               endBtn.id="finish";
