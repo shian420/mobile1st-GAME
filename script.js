@@ -73,14 +73,7 @@ var kaguyaSE=[
   'voice/kaguya20.mp3'
 ];
 
-$(function(){
-  $('.clear').on('click',function(){
-    endSE.src=endBGM[0];
-    endSE.load();
-    endSE.loop=true;
-    endSE.play();
-  });
-});
+
 
 
 for(var iij=1;iij<=20;iij++){
