@@ -280,6 +280,8 @@ return arr;//元の値がランダムに入っている。
 //かぐや編でも使う
 function turn(e){
 var div=e.target;
+finishBtn.textContent="え！？クリアしたん...？聞いてへん...";
+finishBtn.className="endBtn";
 
 if(irohaflg){
   text="bg";
@@ -333,12 +335,11 @@ if(timerFlg2){
         sound.addEventListener('ended',function(){
 
           if(cardIn === 10){
-            if(irohaflg){
-              finishBtn.className="endBtn";
-              skindevelop(timearr,lastFlg,timeI,newtime);
-              finishBtn.textContent="え！？クリアしたん...？聞いてへん...";
 
-              //irohaflg true
+            if(irohaflg){
+              skindevelop(timearr,lastFlg,timeI,newtime);
+
+
           }else{
 
             skindevelop(timearr2,lastFlg2,timeK,newtime);
