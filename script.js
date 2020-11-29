@@ -131,7 +131,7 @@ const cardBox=document.getElementById('cardBox');
 
 $('.iroha').on('click',function(){
 
-  finishBtn.className="fb";
+  finishBtn.className="endBtn";
   classname="defaulut";
   kaguyaflg=false;
   irohaflg=true;
@@ -280,8 +280,11 @@ return arr;//元の値がランダムに入っている。
 //かぐや編でも使う
 function turn(e){
 var div=e.target;
-finishBtn.textContent="え！？クリアしたん...？聞いてへん...";
-finishBtn.className="endBtn";
+
+$(function(){
+  $('#finish').fadeIn();
+});
+
 
 if(irohaflg){
   text="bg";
