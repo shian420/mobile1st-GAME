@@ -72,14 +72,17 @@ var kaguyaSE=[
   'voice/kaguya19.mp3',
   'voice/kaguya20.mp3'
 ];
-$('#finish2').on('click',function(){
+
+const finishBtn2=document.getElementById('finish2');
+
+finishBtn2.addEventListener('click',function(){
   endSE.src=endBGM[1];
   endSE.load();
   endSE.loop=true;
   endSE.play();
 
 $(function(){
-  $('#cardnone').hide();
+  $('#cardnone').slideUp(1000);
   $('#kaguyaResult').slideDown(1000);
   $('.close').remove();
 });
@@ -123,6 +126,7 @@ const cardBox=document.getElementById('cardBox');
 
 $('.iroha').on('click',function(){
 
+  finishBtn.className="fb";
   classname="defaulut";
   kaguyaflg=false;
   irohaflg=true;
@@ -146,6 +150,7 @@ sample1(classname);
 
 //ここからかぐや編
 $('.kaguya').on('click',function(){
+      finishBtn2.className="fb2";
       classname="kaguyaBack";
       kaguyaflg=true;
       irohaflg=false;
@@ -346,11 +351,8 @@ if(timerFlg2){
           }else{
 
             skindevelop(timearr2,lastFlg2,timeK,newtime);
-            const endBtn2=document.createElement('button');
-            endBtn2.textContent="え！？クリアしたん...？聞いてへん...";
-            endBtn2.className="endBtn";
-            endBtn2.id="finish2";
-            cardBox.appendChild(endBtn2);
+            finishBtn2.textContent="え！？クリアしたん...？聞いてへん...";
+            finishBtn2.className="endBtn2";
 
 
 

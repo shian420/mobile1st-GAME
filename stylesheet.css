@@ -37,13 +37,13 @@ html, body {
 }
 
 .firstDisplay {
-  background-color: #aaa6e0;
+  background-color: #1100ff;
   width: 100%;
   height: 100vh;
   text-align: center;
 }
 
-.fb {
+.fb, .fb2 {
   display: none;
 }
 
@@ -412,7 +412,7 @@ html, body {
   background-size: contain;
 }
 
-.endBtn {
+.endBtn, .endBtn2 {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
