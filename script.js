@@ -336,11 +336,12 @@ if(timerFlg2){
                            $('.close').remove();
 
                          });
+                         endSE.src=endBGM[0];
+                                    endSE.load();
+                                    endSE.loop=true;
+                                    endSE.play();
                        });
-                       endSE.src=endBGM[0];
-                                  endSE.load();
-                                  endSE.loop=true;
-                                  endSE.play();
+
 
 
 
