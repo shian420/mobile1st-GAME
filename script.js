@@ -112,6 +112,11 @@ for(var iij=1;iij<=20;iij++){
   images2.push(iij);
 }
 
+const irohaResult=document.getElementById('irohaResult');
+const kaguyaResult=document.getElementById('kaguyaResult');
+const timeI=document.getElementById('timeI');
+const timeK=document.getElementById('timeK');
+
 const clearTime=document.getElementById('clearTime');
 const titleBtn=document.getElementById('titleBtn');
 const h2=document.querySelector('h2');
@@ -328,12 +333,6 @@ if(timerFlg2){
         sound.addEventListener('ended',function(){
 
           if(cardIn === 10){
-
-              const irohaResult=document.getElementById('irohaResult');
-              const kaguyaResult=document.getElementById('kaguyaResult');
-              const timeI=document.getElementById('timeI');
-              const timeK=document.getElementById('timeK');
-
             if(irohaflg){
               finishBtn.className="endBtn";
               skindevelop(timearr,lastFlg,timeI,newtime);
