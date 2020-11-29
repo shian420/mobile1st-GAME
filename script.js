@@ -315,8 +315,7 @@ if(timerFlg2){
 
               const finish=document.getElementById('finish');
 
-              finish.addEventListener('click',()=>{
-
+$('#finish').on('click',function(){
               endSE.src=endBGM[0];
               endSE.load();
               endSE.loop=true;
