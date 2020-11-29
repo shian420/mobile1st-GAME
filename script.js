@@ -325,7 +325,21 @@ if(timerFlg2){
               endBtn.className="endBtn";
               endBtn.id="finish";
               cardBox.appendChild(endBtn);
+              $('#finish').on('click',function(){
 
+              endSE.src=endBGM[0];
+                         endSE.load();
+                         endSE.loop=true;
+                         endSE.play();
+
+                         $(function(){
+                           $('#cardnone').slideUp(500);
+                           $('#irohaResult').slideDown(500);
+                           $('#finish').remove();
+                           $('.close').remove();
+
+                         });
+                       });
 
 
 
@@ -456,18 +470,3 @@ timearr.push(md,sd,msd,str);
 return timearr;
 },1);
 }
-
-$('#finish').on('click',function(){
-              endSE.src=endBGM[0];
-              endSE.load();
-              endSE.loop=true;
-              endSE.play();
-
-              $(function(){
-                $('#cardnone').slideUp(500);
-                $('#irohaResult').slideDown(500);
-                $('#finish').remove();
-                $('.close').remove();
-
-              });
-            });
