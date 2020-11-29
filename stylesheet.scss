@@ -34,9 +34,73 @@ html,body{
 
 
 .firstDisplay{
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(63, 62, 62);
     width: 100%;
     height: 100vh;
+    text-align: center;
+}
+.like{
+  margin: 0 auto;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  transition: background-color .6s ;
+}
+.like:hover{
+  background-color: rgba(128, 128, 128, 0.164);
+}
+.like [type="checkbox"]{
+  display: none;
+}
+.heart{
+  position: relative;
+  top: 1px;
+  user-select: none;
+  font-size: 5rem;
+  color: gray;
+}
+.like [type="checkbox"]:checked~.heart{
+  animation: heart .6s forwards;
+}
+
+@keyframes heart{
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+    color: red;
+  }
+}
+.wa{
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: red;
+  transform: scale(0);
+}
+.like [type="checkbox"]:checked~.wa{
+  animation: wa .6s forwards;
+}
+@keyframes wa{
+  0%{
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 0;
+  }
 }
 .aline{
     width: 90%;
@@ -45,7 +109,6 @@ html,body{
     p{
         padding-bottom: 10px;
         font-size: 1rem;
-        text-align: center;
     }
     .non{
         margin: 15px auto;

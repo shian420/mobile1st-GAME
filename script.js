@@ -183,8 +183,8 @@ timestart();
 
 titleBtn.addEventListener('click',function(){
   $(function(){
-    $('#firstDisplays').fadeOut(1000);
-    $('#resultWp').fadeIn(3000);
+    $('#firstDisplays').fadeOut(500);
+    $('#resultWp').fadeIn(2000);
 
     $(window).scroll(function(){
       $('.effect').each(function(){
@@ -317,12 +317,12 @@ if(timerFlg2){
               skindevelop(timearr,lastFlg,timeI,newtime);
 
               $(function(){
-                $('#cardnone').hide();
-                $('#irohaResult').slideDown(1000);
+                $('#cardnone').slideUp(500);
+                $('#irohaResult').slideDown(500);
+
                 $('.close').remove();
 
               });
-
               //irohaflg true
           }else{
 

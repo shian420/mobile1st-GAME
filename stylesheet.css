@@ -37,9 +37,132 @@ html, body {
 }
 
 .firstDisplay {
-  background-color: black;
+  background-color: #3f3e3e;
   width: 100%;
   height: 100vh;
+  text-align: center;
+}
+
+.like {
+  margin: 0 auto;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  -webkit-transition: background-color .6s;
+  transition: background-color .6s;
+}
+
+.like:hover {
+  background-color: rgba(128, 128, 128, 0.164);
+}
+
+.like [type="checkbox"] {
+  display: none;
+}
+
+.heart {
+  position: relative;
+  top: 1px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 5rem;
+  color: gray;
+}
+
+.like [type="checkbox"]:checked ~ .heart {
+  -webkit-animation: heart .6s forwards;
+          animation: heart .6s forwards;
+}
+
+@-webkit-keyframes heart {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: red;
+  }
+}
+
+@keyframes heart {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: red;
+  }
+}
+
+.wa {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: red;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.like [type="checkbox"]:checked ~ .wa {
+  -webkit-animation: wa .6s forwards;
+          animation: wa .6s forwards;
+}
+
+@-webkit-keyframes wa {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes wa {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 0;
+  }
 }
 
 .aline {
@@ -51,7 +174,6 @@ html, body {
 .aline p {
   padding-bottom: 10px;
   font-size: 1rem;
-  text-align: center;
 }
 
 .aline .non {
