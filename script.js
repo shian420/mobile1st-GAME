@@ -306,20 +306,31 @@ if(timerFlg2){
 
 
             if(irohaflg){
+              skindevelop(timearr,lastFlg,timeI,newtime);
+              const endBtn=document.createElement('div');
+              endBtn.textContent="え！？クリアしたん...？聞いてへん...";
+              endBtn.className="endBtn";
+              endBtn.id="finish";
+              cardBox.appendChild(endBtn);
+
+              const finish=document.getElementById('finish');
+
+              finish.addEventListener('click',()=>{
+
               endSE.src=endBGM[0];
               endSE.load();
               endSE.loop=true;
               endSE.play();
 
-              skindevelop(timearr,lastFlg,timeI,newtime);
-
               $(function(){
                 $('#cardnone').slideUp(500);
                 $('#irohaResult').slideDown(500);
-
+                $('#finish').remove();
                 $('.close').remove();
 
               });
+            });
+
               //irohaflg true
           }else{
 
