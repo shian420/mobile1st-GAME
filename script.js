@@ -313,6 +313,10 @@ if(timerFlg2){
 
 
             if(irohaflg){
+              endSE.src=endBGM[0];
+              endSE.load();
+              endSE.loop=true;
+              endSE.play();
 
               skindevelop(timearr,lastFlg,timeI,newtime);
 
