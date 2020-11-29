@@ -72,7 +72,33 @@ var kaguyaSE=[
   'voice/kaguya19.mp3',
   'voice/kaguya20.mp3'
 ];
+$('#finish2').on('click',function(){
+  endSE.src=endBGM[1];
+  endSE.load();
+  endSE.loop=true;
+  endSE.play();
 
+$(function(){
+  $('#cardnone').hide();
+  $('#kaguyaResult').slideDown(1000);
+  $('.close').remove();
+});
+});
+
+$('#finish').on('click',function(){
+              endSE.src=endBGM[0];
+              endSE.load();
+              endSE.loop=true;
+              endSE.play();
+
+              $(function(){
+                $('#cardnone').slideUp(500);
+                $('#irohaResult').slideDown(500);
+                $('#finish').remove();
+                $('.close').remove();
+
+              });
+            });
 
 
 
@@ -313,38 +339,22 @@ if(timerFlg2){
               endBtn.id="finish";
               cardBox.appendChild(endBtn);
 
-              const finish=document.getElementById('finish');
 
-$('#finish').on('click',function(){
-              endSE.src=endBGM[0];
-              endSE.load();
-              endSE.loop=true;
-              endSE.play();
 
-              $(function(){
-                $('#cardnone').slideUp(500);
-                $('#irohaResult').slideDown(500);
-                $('#finish').remove();
-                $('.close').remove();
-
-              });
-            });
 
               //irohaflg true
           }else{
 
             skindevelop(timearr2,lastFlg2,timeK,newtime);
+            const endBtn2=document.createElement('button');
+            endBtn2.textContent="え！？クリアしたん...？聞いてへん...";
+            endBtn2.className="endBtn";
+            endBtn2.id="finish2";
+            cardBox.appendChild(endBtn2);
 
-            $(function(){
-              $('#cardnone').hide();
-              $('#kaguyaResult').slideDown(1000);
-              $('.close').remove();
-            });
 
-            endSE.src=endBGM[1];
-            endSE.load();
-            endSE.loop=true;
-            endSE.play();
+
+
 
             var timearr2=[];
 
