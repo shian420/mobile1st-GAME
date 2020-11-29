@@ -334,18 +334,10 @@ if(timerFlg2){
               const timeI=document.getElementById('timeI');
               const timeK=document.getElementById('timeK');
 
-
-
-
-
             if(irohaflg){
+              finishBtn.className="endBtn";
               skindevelop(timearr,lastFlg,timeI,newtime);
               finishBtn.textContent="え！？クリアしたん...？聞いてへん...";
-              finishBtn.className="endBtn";
-
-
-
-
 
               //irohaflg true
           }else{
@@ -353,10 +345,6 @@ if(timerFlg2){
             skindevelop(timearr2,lastFlg2,timeK,newtime);
             finishBtn2.textContent="え！？クリアしたん...？聞いてへん...";
             finishBtn2.className="endBtn2";
-
-
-
-
 
             var timearr2=[];
 
