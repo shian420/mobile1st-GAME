@@ -85,6 +85,21 @@ $(function(){
 });
 });
 
+const finishBtn=document.getElementById('finish');
+
+finishBtn.addEventListener('click',function(){
+
+  endSE.src=endBGM[0];
+  endSE.load();
+  endSE.loop=true;
+  endSE.play();
+
+$(function(){
+  $('#cardnone').slideUp(1000);
+  $('#irohaResult').slideDown(1000);
+  $('.close').remove();
+});
+});
 
 
 
@@ -320,27 +335,9 @@ if(timerFlg2){
 
             if(irohaflg){
               skindevelop(timearr,lastFlg,timeI,newtime);
-              const endBtn=document.createElement('button');
-              endBtn.textContent="え！？クリアしたん...？聞いてへん...";
-              endBtn.className="endBtn";
-              endBtn.id="finish";
-              cardBox.appendChild(endBtn);
-              $('#finish').on('click',function(){
+              finishBtn.textContent="え！？クリアしたん...？聞いてへん...";
+              finishBtn.className="endBtn";
 
-
-
-                         $(function(){
-                           $('#cardnone').slideUp(500);
-                           $('#irohaResult').slideDown(500);
-                           $('#finish').remove();
-                           $('.close').remove();
-
-                         });
-                         endSE.src=endBGM[0];
-                                    endSE.load();
-                                    endSE.loop=true;
-                                    endSE.play();
-                       });
 
 
 

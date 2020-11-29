@@ -34,11 +34,15 @@ html,body{
 
 
 .firstDisplay{
-  background-color: rgb(166, 224, 202);
+  background-color: rgb(170, 166, 224);
     width: 100%;
     height: 100vh;
     text-align: center;
 }
+.fb{
+  display: none;
+}
+
 .like{
   margin: 0 auto;
   cursor: pointer;
