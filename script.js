@@ -155,7 +155,7 @@ sample1(classname);
 
 //ここからかぐや編
 $('.kaguya').on('click',function(){
-      finishBtn2.className="fb2";
+      finishBtn2.className="endBtn2";
       classname="kaguyaBack";
       kaguyaflg=true;
       irohaflg=false;
@@ -281,10 +281,6 @@ return arr;//元の値がランダムに入っている。
 function turn(e){
 var div=e.target;
 
-$(function(){
-  $('#finish').fadeIn();
-});
-
 
 if(irohaflg){
   text="bg";
@@ -341,13 +337,16 @@ if(timerFlg2){
 
             if(irohaflg){
               skindevelop(timearr,lastFlg,timeI,newtime);
-
+              $(function(){
+                $('#finish').fadeIn();
+              });
 
           }else{
 
             skindevelop(timearr2,lastFlg2,timeK,newtime);
-            finishBtn2.textContent="え！？クリアしたん...？聞いてへん...";
-            finishBtn2.className="endBtn2";
+            $(function(){
+              $('#finish2').fadeIn();
+            });
 
             var timearr2=[];
 

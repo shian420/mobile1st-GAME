@@ -37,14 +37,10 @@ html, body {
 }
 
 .firstDisplay {
-  background-color: #020202;
+  background-color: white;
   width: 100%;
   height: 100vh;
   text-align: center;
-}
-
-.fb, .fb2 {
-  display: none;
 }
 
 .like {
