@@ -137,11 +137,10 @@ $('.iroha').on('click',function(){
   kaguyaflg=false;
   irohaflg=true;
 
-  $(function(){
-    $('#resultWp').hide();
-    $('#irohaResult').hide();
-    $('#cardnone').fadeIn(1000);
-  });
+  pageEffect();
+
+
+
   if(titleMcflg2){
     endSE.pause();
     endSE.currentTime=0;
@@ -165,11 +164,7 @@ $('.kaguya').on('click',function(){
     endSE.pause();
     endSE.currentTime=0;
   }
-  $(function(){
-    $('#resultWp').hide();
-    $('#kaguyaResult').hide();
-    $('#cardnone').fadeIn(1000);
-  });
+  pageEffect();
 
   if(titleMcflg) titleMc.pause();
 
@@ -177,6 +172,14 @@ $('.kaguya').on('click',function(){
   shuffle2(kaguyaSE,images2);
 });//かぐや編onclick
 
+function pageEffect(){
+$(function(){
+  $('#resultWp').hide();
+  $('#kaguyaResult').hide();
+  $('#irohaResult').hide();
+  $('#cardnone').fadeIn(1000);
+});
+}
 
 
 
