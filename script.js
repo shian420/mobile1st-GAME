@@ -99,6 +99,7 @@ finishBtn.addEventListener('click',function(){
 
 $(function(){
   $('#cardnone').slideUp(1000);
+  $('#finish').hide();
   $('#irohaResult').slideDown(1000);
   $('.close').remove();
 });
@@ -131,7 +132,6 @@ const cardBox=document.getElementById('cardBox');
 
 $('.iroha').on('click',function(){
 
-  finishBtn.className="endBtn";
   classname="defaulut";
   kaguyaflg=false;
   irohaflg=true;
