@@ -37,13 +37,17 @@ html, body {
 }
 
 .firstDisplay {
-  background-color: #8cfbff;
+  background-color: black;
   width: 100%;
   height: 100vh;
   text-align: center;
 }
 
 .like {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   margin: 0 auto;
   cursor: pointer;
   display: -webkit-box;
@@ -63,7 +67,7 @@ html, body {
 }
 
 .like:hover {
-  opacity: 0;
+  background-color: rgba(0, 0, 255, 0);
 }
 
 .like [type="checkbox"] {
@@ -630,8 +634,6 @@ h4 {
   min-height: 100vh;
   height: auto;
   background-color: #c8dff1;
-  -o-object-fit: cover;
-     object-fit: cover;
   padding-bottom: 30px;
   display: none;
 }
@@ -643,14 +645,9 @@ h4 {
 }
 
 .clear {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
   font-size: 2.2rem;
   padding-top: 20px;
-  font-family: fantasy;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-weight: bold;
   text-align: center;
 }
@@ -678,8 +675,9 @@ h4 {
 }
 
 .another {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .return-game {

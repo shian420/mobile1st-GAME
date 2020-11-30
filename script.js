@@ -73,6 +73,7 @@ var kaguyaSE=[
   'voice/kaguya20.mp3'
 ];
 
+
 const finishBtn2=document.getElementById('finish2');
 
 finishBtn2.addEventListener('click',function(){
@@ -88,6 +89,7 @@ $(function(){
   $('.close').remove();
 });
 });
+
 
 const finishBtn=document.getElementById('finish');
 
@@ -107,12 +109,11 @@ $(function(){
 });
 
 
-
-
 for(var iij=1;iij<=20;iij++){
   images.push(iij);
   images2.push(iij);
 }
+
 
 const timeI=document.getElementById('timeI');
 const timeK=document.getElementById('timeK');
@@ -125,8 +126,7 @@ const endSE=new Audio();
 var endBGM=['megumi.mp3','kaguya.mp3'];
 
 
-
-
+//ここからいろは編
 $('.iroha').on('click',function(){
 
   classname="defaulut";
@@ -135,25 +135,24 @@ $('.iroha').on('click',function(){
 
   pageEffect();
 
-
-
   if(titleMcflg2){
     endSE.pause();
     endSE.currentTime=0;
   }
 
-if(titleMcflg) titleMc.pause();
+  if(titleMcflg) titleMc.pause();
 
-sample1(classname);
+  sample1(classname);
   shuffle2(soundArr,images);//ここに使う音声画像を入れる
 });
 //ここまでいろは編
 
 //ここからかぐや編
 $('.kaguya').on('click',function(){
-      classname="kaguyaBack";
-      kaguyaflg=true;
-      irohaflg=false;
+
+  classname="kaguyaBack";
+  kaguyaflg=true;
+  irohaflg=false;
 
   if(titleMcflg2){
     endSE.pause();
@@ -173,6 +172,7 @@ $(function(){
   $('#kaguyaResult').hide();
   $('#irohaResult').hide();
   $('#cardnone').fadeIn(1000);
+    $('h4').show();
 });
 }
 
@@ -333,6 +333,10 @@ if(timerFlg2){
 
           if(cardIn === 10){
 
+            $(function(){
+              $('h4').hide();
+            });
+
             if(irohaflg){
 
               skindevelop(timearr,lastFlg,timeI,newtime);
@@ -355,12 +359,10 @@ if(timerFlg2){
             timearr2.push((timearr[1]));
             timearr2.push((timearr[2]));
             timearr2.push((timearr[3]));
-
           }
             cardIn=0;
             titleMcflg2=true;
           }
-
           cardss2.className="card close";
           cardss.className="card close";
           timerFlg=false;
@@ -386,6 +388,8 @@ if(timerFlg2){
 }
 }//turn()の終了
 //ここまで神経衰弱
+
+//タイムの比較
 const record=document.getElementById('record');
 function skindevelop(timearr,flg,times,newtime){
 
@@ -400,7 +404,6 @@ if(flg){
   newtime.push(timearr[2]);
 }
 
-
 if(newtime[0] > timearr[0]){
   newRecord(timearr,newtime);
 }
@@ -409,6 +412,7 @@ if(newtime[0] === timearr[0]){
     newRecord(timearr,newtime);
   }
 }
+
 if(newtime[0] === timearr[0]){
   if(newtime[1] === timearr[1]){
     if(newtime[2] > timearr[2]){
@@ -417,9 +421,9 @@ if(newtime[0] === timearr[0]){
   }
 }
 flg=false;
-
 }
 
+//タイム更新と配列削除追加
 function newRecord(timearr,newtime){
   record.className='newRecords';
 timeI.innerHTML=timearr[3];
@@ -431,6 +435,7 @@ newtime.push(timearr[1]);
 newtime.push(timearr[2]);
 }
 
+//タイマー
 var timing=new Date();
 var Ms;
 var myT;
@@ -458,6 +463,7 @@ var msd=Ms;
 
 str=h4.innerHTML='TIME '+ M + ':' + S + ':' + Ms;
 timearr.push(md,sd,msd,str);
+
 return timearr;
 },1);
 }
