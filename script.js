@@ -166,13 +166,14 @@ $('.kaguya').on('click',function(){
   shuffle2(kaguyaSE,images2);
 });//かぐや編onclick
 
+
 function pageEffect(){
 $(function(){
   $('#resultWp').hide();
   $('#kaguyaResult').hide();
   $('#irohaResult').hide();
   $('#cardnone').fadeIn(1000);
-    $('h4').show();
+  $('h4').show();
 });
 }
 
@@ -210,7 +211,6 @@ timestart();
 //ここまでsample1
 
 //ここから共通スタート画面
-
 titleBtn.addEventListener('click',function(){
   $(function(){
     $('#firstDisplays').fadeOut(500);
@@ -353,7 +353,7 @@ if(timerFlg2){
             timearr2.push((timearr[2]));
             timearr2.push((timearr[3]));
 
-            skindevelop(timearr2,lastFlg2,timeK,newtime);
+            skindevelop(timearr2,lastFlg2,timeK,newtime2);
 
             $(function(){
               $('#finished').fadeIn();
@@ -392,9 +392,12 @@ if(timerFlg2){
 
 //タイムの比較
 const record=document.getElementById('record');
+const record2=document.getElementById('record2');
+
 function skindevelop(timearr,flg,times,newtime){
 
 record.className='new-record-none';
+record2.className='new-record-none';
 
 clearInterval(time);
 times.innerHTML='CLEAR! '+ timearr[3];
@@ -427,6 +430,8 @@ flg=false;
 //タイム更新と配列削除追加
 function newRecord(timearr,newtime){
   record.className='newRecords';
+  record2.className='newRecords';
+
 timeI.innerHTML=timearr[3];
 timeK.innerHTML=timearr[3];
 
