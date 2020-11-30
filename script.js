@@ -83,6 +83,7 @@ finishBtn2.addEventListener('click',function(){
 
 $(function(){
   $('#cardnone').slideUp(1000);
+  $('#finish2').hide();
   $('#kaguyaResult').slideDown(1000);
   $('.close').remove();
 });
