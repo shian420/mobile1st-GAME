@@ -114,19 +114,15 @@ for(var iij=1;iij<=20;iij++){
   images2.push(iij);
 }
 
-const irohaResult=document.getElementById('irohaResult');
-const kaguyaResult=document.getElementById('kaguyaResult');
 const timeI=document.getElementById('timeI');
 const timeK=document.getElementById('timeK');
 
-const clearTime=document.getElementById('clearTime');
 const titleBtn=document.getElementById('titleBtn');
-const h2=document.querySelector('h2');
-const reslutWp=document.getElementById('resultWp');
+const cardBox=document.getElementById('cardBox');
+
 const titleMc=new Audio('harumodoki.mp3');
 const endSE=new Audio();
 var endBGM=['megumi.mp3','kaguya.mp3'];
-const cardBox=document.getElementById('cardBox');
 
 
 
@@ -155,7 +151,6 @@ sample1(classname);
 
 //ここからかぐや編
 $('.kaguya').on('click',function(){
-      finishBtn2.className="endBtn2";
       classname="kaguyaBack";
       kaguyaflg=true;
       irohaflg=false;
@@ -260,7 +255,6 @@ function shuffle2(soundArr,images){
   images[j2]=temp2;
 }
  soimgArr.push(soundArr,images);
- console.log(soimgArr);
  return soimgArr;
 }
 
@@ -340,7 +334,9 @@ if(timerFlg2){
           if(cardIn === 10){
 
             if(irohaflg){
+
               skindevelop(timearr,lastFlg,timeI,newtime);
+
               $(function(){
                 $('#finish').fadeIn();
               });
@@ -348,6 +344,7 @@ if(timerFlg2){
           }else{
 
             skindevelop(timearr2,lastFlg2,timeK,newtime);
+
             $(function(){
               $('#finish2').fadeIn();
             });
@@ -358,7 +355,6 @@ if(timerFlg2){
             timearr2.push((timearr[1]));
             timearr2.push((timearr[2]));
             timearr2.push((timearr[3]));
-
 
           }
             cardIn=0;
@@ -373,7 +369,9 @@ if(timerFlg2){
     }else{ //2回目で外れ 裏に戻す作業
       cardss2=div;
       timerFlg2=true;
+
       sound.addEventListener('ended',function(){
+
       cardss2.className="card";
       cardss2.classList.add(classname);
       cardss2.innerHTML="";
@@ -400,9 +398,7 @@ if(flg){
   newtime.push(timearr[0]);
   newtime.push(timearr[1]);
   newtime.push(timearr[2]);
-  console.log(newtime);
 }
-console.log(timearr);
 
 
 if(newtime[0] > timearr[0]){
