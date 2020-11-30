@@ -349,16 +349,15 @@ if(timerFlg2){
 
             skindevelop(timearr2,lastFlg2,timeK,newtime);
 
-            $(function(){
-              $('#finish2').fadeIn();
-            });
-
             var timearr2=[];
 
             timearr2.push((timearr[0]));
             timearr2.push((timearr[1]));
             timearr2.push((timearr[2]));
             timearr2.push((timearr[3]));
+            $(function(){
+              $('#finish2').fadeIn();
+            });
           }
             cardIn=0;
             titleMcflg2=true;
