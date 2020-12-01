@@ -37,7 +37,7 @@ html, body {
 }
 
 .firstDisplay {
-  background-color: white;
+  background-color: #faeecf;
   width: 100%;
   height: 100vh;
   text-align: center;
@@ -130,6 +130,15 @@ html, body {
   background-color: red;
   -webkit-transform: scale(0);
           transform: scale(0);
+}
+
+.title-fixed {
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .like [type="checkbox"]:checked ~ .wa {
