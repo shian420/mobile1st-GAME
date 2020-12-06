@@ -27,6 +27,10 @@ var newtime2=[];
 lastFlg2=true;
 var images=[];
 var images2=[];
+
+var playlistC=0;
+var allvoiceC=1;
+
 var soundArr=[
   'voice/iroha1.mp3',
   'voice/iroha2.mp3',
@@ -73,14 +77,49 @@ var kaguyaSE=[
   'voice/kaguya20.mp3'
 ];
 
+const allSK=document.getElementById('countK');
 
 const finishBtn2=document.getElementById('finished');
+const kaguyaSound=document.getElementById('kaguyaSound');
+const kaguyavoice=document.getElementById('kaguyavoice');
 
+//かぐや
 finishBtn2.addEventListener('click',function(){
   endSE.src=endBGM[1];
   endSE.load();
   endSE.loop=true;
   endSE.play();
+
+  kaguyaSound.addEventListener('click',()=>{
+    const kagS=new Audio();
+
+    endSE.pause();
+    kagS.pause();
+    playlistC=0;
+    allvoiceC=1;
+
+    kagS.src=kaguyaSE[playlistC];
+    kagS.play();
+    allSK.innerHTML="voice " + allvoiceC;
+
+    kagS.addEventListener('ended',()=>{
+      playlistC++;
+      allvoiceC++;
+
+      kagS.src=kaguyaSE[playlistC];
+      kagS.play();
+
+    if(allvoiceC < 21){
+      allSK.innerHTML="voice " + allvoiceC;
+    }
+    });
+
+  kaguyavoice.addEventListener('click',()=>{
+    kagS.pause();
+    endSE.play();
+  });
+});
+
 
 $(function(){
   $('#cardnone').slideUp(1000);
@@ -89,9 +128,12 @@ $(function(){
   $('.close').remove();
 });
 });
-
+//ここまでかぐや
+const allSI=document.getElementById('countI');
 
 const finishBtn=document.getElementById('finish');
+const irohaSound=document.getElementById('irohaSound');
+const irohavoice=document.getElementById('irohavoice');
 
 finishBtn.addEventListener('click',function(){
 
@@ -99,6 +141,37 @@ finishBtn.addEventListener('click',function(){
   endSE.load();
   endSE.loop=true;
   endSE.play();
+
+  irohaSound.addEventListener('click',()=>{
+    const iroS=new Audio();
+
+    endSE.pause();
+    iroS.pause();
+    playlistC=0;
+    allvoiceC=1;
+
+    iroS.src=soundArr[playlistC];
+    iroS.play();
+    allSI.innerHTML="voice " + allvoiceC;
+
+    iroS.addEventListener('ended',()=>{
+      playlistC++;
+      allvoiceC++;
+
+      iroS.src=soundArr[playlistC];
+      iroS.play();
+
+    if(allvoiceC < 21){
+      allSI.innerHTML="voice " + allvoiceC;
+    }
+    });
+
+  irohavoice.addEventListener('click',()=>{
+    iroS.pause();
+    endSE.play();
+  });
+});
+
 
 $(function(){
   $('#cardnone').slideUp(1000);
